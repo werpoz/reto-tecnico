@@ -1,25 +1,34 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Film {
+export class FilmEntity {
   @PrimaryGeneratedColumn()
   id: number;
+
   @Column()
-  titulo: string;
+  title: string;
+
   @Column()
-  id_episodio: number;
+  episodeId: number;
+
   @Column()
-  introduccion: string;
+  openingCrawl: string;
+
   @Column()
   director: string;
+
   @Column()
-  productor: string;
+  producer: string;
+
   @Column()
-  fecha_lanzamiento: Date;
+  releaseDate: Date;
+
   @Column()
-  creado?: Date;
+  createdAt: Date;
+
   @Column()
-  editado?: Date;
+  updatedAt: Date;
+
   @Column()
   url: string;
 }
